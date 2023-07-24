@@ -1,0 +1,293 @@
+:root {
+  --primary-color-hue: 28;
+  --dark-color-lightness: 17%;
+  --light-color-lightness: 95%;
+  --white-color-lightness: 100%;
+
+  --color-dark: hsl(252, 30%, var(--dark-color-lightness));
+  --color-light: hsl(252, 30%, var(--light-color-lightness));
+  --color-gray: hsl(252, 15%, 65%);
+  --color-primary: hsl(var(--primary-color-hue), 100%, 60%);
+  --color-secondary: hsl(252, 100%, 90%);
+  --color-success: hsl(120, 95%, 65%);
+  --color-danger: hsl(0, 95%, 65%);
+  --color-white: hsl(252, 30%, var(--white-color-lightness));
+  --color-black: hsl(252, 30%, 10%);
+
+  --border-radius: 2rem;
+  --card-border-radius: 1rem;
+  --btn-padding: 0.6rem 2rem;
+  --search-padding: 0.6rem 1rem;
+  --card-padding: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--color-dark);
+  background: var(--color-white);
+  display: flex;
+  gap: 1rem;
+  overflow-x: hidden;
+  /* font-family: 'Roboto', sans-serif; */
+}
+
+.container {
+  width: 80%;
+  /* width: 50%; */
+  margin: 0 auto;
+}
+
+
+/* *************** NAV PANEL *************** */
+.logo {
+  width: 50px;
+  margin: 0 auto;
+}
+
+nav {
+  /* position: absolute; */
+  background-color: var(--color-light);
+  height: 100vh;
+  width: 150px;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  overflow: hidden;
+  position: sticky;
+  top: 0rem;
+
+  box-shadow: 0px 2px 2px 0px rgba(153, 153, 153, 1);
+  -moz-box-shadow: 0px 2px 2px 0px rgba(153, 153, 153, 1);
+  box-shadow: 0px 2px 2px 0px rgba(153, 153, 153, 1);
+}
+
+.nav-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 1rem 0;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.nav-items li, .sign-out {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+  transition: all .2s;
+  /* margin: auto; */
+}
+
+.nav-items li:hover,
+.sign-out:hover {
+  color: var(--color-primary);
+}
+
+.nav-items li:first-child {
+  justify-content: right;
+  padding-right: 0;
+  color: var(--color-black);
+}
+
+.sign-out:hover {
+  color: var(--color-danger);
+}
+
+
+/* *************** MAIN *************** */
+main {
+  width: 85%;
+  flex-grow: 1;
+  padding: 2rem 1rem;
+}
+
+/* TOP */
+
+main .top {
+  background-color: var(--color-light);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: var(--search-padding);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+main .top .right {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.top .name {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* MIDDLE */
+main .middle {
+  width: 100%;
+  margin: 2rem 0;
+  display: 	flex;
+  justify-content: space-between;
+}
+
+
+/* Search box */
+.box {
+  position: relative;
+}
+.box .material-icons {
+  position: absolute;
+  font-size: 1.5rem;
+  font-weight: 500;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.search {
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--color-gray);
+  border-radius: 5px;
+  width: 18rem;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+.search:focus {
+  width: 22rem;
+  border: 2px solid var(--color-primary);
+  padding-left: 2.8rem;
+  transition: 0.3s;
+}
+
+/* Category filter */
+.middle .cat-list {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.cat-list li {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+}
+
+.cat-list li:hover {
+  background-color: var(--color-light);
+}
+
+/* ********** DISH LIST ********** */
+.content {
+  margin: auto;
+  width: 100%;
+}
+
+.food-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.dish {
+  height: 100%;
+  width: 258px;
+  box-shadow: 0 0 1px 0.4px var(--color-light);
+  /* border: 1px solid var(--color-danger); */
+  /* border-radius: var(--card-border-radius); */
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  transition: .5s;
+  flex-grow: 1;
+  max-width: 300px;
+}
+.dish:last-child {
+  flex-grow: 0;
+}
+
+.food-pic {
+  height: 250px;
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.food-pic img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform .8s ease;
+}
+
+.food-pic:hover img {
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+.food-details {
+  padding: 0.5rem;
+}
+
+.food-details .title {
+  font-weight: 500;
+}
+
+.food-details .price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  padding-bottom: 1.5rem;
+}
+
+.food-details .add2cart {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  opacity: 0.9;
+  padding: 0.8rem 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.food-details .add2cart:hover {
+  opacity: 1;
+}
+
+
+/* h1 {
+  color: #6ed415;
+}
+h2 {
+  color: var(--color-danger);
+} */
