@@ -45,10 +45,10 @@
     <div class="nav-panel">
       <img src="images/logo_black.png" alt="Kitchen's Logo" class="logo">
       <ul class="nav-items container">
-        <li><span class='material-icons'>menu</span></li>
+        <li><span class='material-icons'>close</span></li>
         <li> <span class='material-icons'>home</span> <span>Home</span></li>
         <li> <span class='material-icons'>person</span> <span>Account</span></li>
-        <li><span class='material-icons'>fastfood</span> <span>Dishes</span></li>
+        <li><span class='material-icons'>restaurant</span> <span>Dishes</span></li>
         <li> <span class='material-icons'>shopping_bag</span> <span>Orders</span></li>
         <li> <span class='material-icons'>article</span> <span>Blogs</span></li>
         <li> <span class='material-icons'>help</span> <span>Help</span></li>
@@ -62,17 +62,35 @@
   <main>
     <section class="top container">
       <div class="left">Hello, <span class="name">Emmanuel</span> 🖐</div>
-      <div class="right"> <span class='material-icons'>shopping_cart</span> <span>Cart</span></div>
+      <div class="right"> 
+        <span class='material-icons'>shopping_cart</span>
+        <div class="num-in-cart">
+          <span id="cartItems">9</span>
+        </div>
+        <span>Cart</span></div>
     </section>
     <section class="middle container">
       <div class="search-box">
         <div class="box">
           <span class='material-icons'>search</span>
-          <input class="search" type="search" placeholder="Search food...">
+          <input class="search" type="search" placeholder="Search dish...">
         </div>
       </div>
-      <div class="cat">
+      <!-- Category list at large screen sizes -->
+      <div class="cat-row">
         <ul class="cat-list">
+          <li class="active">All</li>
+          <li>African</li>
+          <li>American</li>
+          <li>Asian</li>
+          <li>European</li>
+        </ul>
+      </div>
+
+      <!-- Category dropdown at small screen sizes -->
+      <div class="cat-dropdown">
+        <button class="dropdown-btn"><span>All</span> <span class='material-icons'>expand_more</span></button>
+        <ul class="cat-items">
           <li>All</li>
           <li>African</li>
           <li>American</li>
@@ -80,137 +98,150 @@
           <li>European</li>
         </ul>
       </div>
+
     </section>
     <section class="content">
       <div class="food-list">
         <div class="dish">
+          <span class="recipe">Recipe</span>
           <figure class="food-pic">
-            <img src="images/pancakes.jpg" alt="">
+            <img src="images/pancakes.jpg" alt="pancakes">
           </figure>
           <div class="food-details">
             <h4 class="title">Pancake Schaumomelette</h4>
-            <p class="price"> $5.00</p>
+            <p class="price"> $<span>5.00</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
         <div class="dish">
+          <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/noodles.jpg" alt="noodles">
           </figure>
           <div class="food-details">
             <h4 class="title">Chinese Noodles</h4>
-            <p class="price"> $3.50</p>
+            <p class="price"> $<span>8.00</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
         <div class="dish">
+          <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/pasta.jpg" alt="pasta">
           </figure>
           <div class="food-details">
             <h4 class="title">Pasta with Red Wine</h4>
-            <p class="price"> $15.00</p>
+            <p class="price"> $<span>15.00</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
         <div class="dish">
+          <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/goulash-soup.jpg" alt="goulash">
           </figure>
           <div class="food-details">
             <h4 class="title">Goulash Soup</h4>
-            <p class="price"> $7.25</p>
+            <p class="price"> $<span>7.25</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
         <div class="dish">
+          <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/raspberries-yoghurt.jpg" alt="yoghurt">
           </figure>
           <div class="food-details">
             <h4 class="title">Raspberries Yoghurt</h4>
-            <p class="price"> $6.00</p>
+            <p class="price"> $<span>6.00</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
         <div class="dish">
+          <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/french-fries.jpg" alt="french fries">
           </figure>
           <div class="food-details">
             <h4 class="title">French Fries</h4>
-            <p class="price"> $9.10</p>
+            <p class="price"> $<span>9.10</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
         <div class="dish">
+          <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/meatloaf.jpg" alt="meat loaf">
           </figure>
           <div class="food-details">
             <h4 class="title">Meat Loaf</h4>
-            <p class="price"> $12.50</p>
+            <p class="price"> $<span>12.50</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
         <div class="dish">
+          <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/pumpkin-soup.jpg" alt="pumpkin soup">
           </figure>
           <div class="food-details">
             <h4 class="title">Pumpkin Soup</h4>
-            <p class="price"> $8.00</p>
+            <p class="price"> $<span>8.00</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
         <div class="dish">
+          <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/salad.jpg" alt="salad">
           </figure>
           <div class="food-details">
             <h4 class="title">Salad</h4>
-            <p class="price"> $5.75</p>
+            <p class="price"> $<span>5.75</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
         <div class="dish">
+          <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/chicken-schnitzel.jpg" alt="chicken schnitzel">
           </figure>
           <div class="food-details">
             <h4 class="title">Chicken Schnitzel</h4>
-            <p class="price"> $15.50</p>
+            <p class="price"> $<span>15.50</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
         <div class="dish">
+          <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/gourmet.jpg" alt="gournet">
           </figure>
           <div class="food-details">
             <h4 class="title">Gournet</h4>
-            <p class="price"> $13.00</p>
+            <p class="price"> $<span>13.00</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
         <div class="dish">
+          <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/Sambal.jpg" alt="Sambal">
           </figure>
           <div class="food-details">
             <h4 class="title">Sambal with Omelette</h4>
-            <p class="price"> $11.50</p>
+            <p class="price"> $<span>11.50</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
@@ -221,12 +252,16 @@
   <h2>TESTING</h2> -->
 </body>
 
+<script src="index.js"></script>
+
 <!-- 
 <span class='material-icons'>close</span>
 
 <span class='material-icons'>done</span>
 <span class='material-icons'>feed</span>
 <span class='material-icons'>palette</span>
+<span class='material-icons'>expand_less</span>
+<span class='material-icons'>tips_and_updates</span>
 
 <i class="uil uil-signout"></i>
 <i class="uil uil-shopping-cart"></i> -->

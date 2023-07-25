@@ -129,18 +129,37 @@ main .top {
   padding: 1rem;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
+}
+
+.top .name {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
 main .top .right {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  cursor: pointer;
 }
 
-.top .name {
-  color: var(--color-primary);
-  font-weight: 600;
+.num-in-cart {
+  position: absolute;
+}
+
+#cartItems {
+  position: absolute;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.3rem;
+  margin: auto;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  top: 50%;
+  left: 0.7rem;
+  transform: translateY(-100%);
+  z-index: 2;
 }
 
 /* MIDDLE */
@@ -166,7 +185,7 @@ main .middle {
   pointer-events: none;
 }
 .search {
-  padding: 0.8rem 2rem;
+  padding: 0.85rem 2rem;
   border: 2px solid var(--color-gray);
   border-radius: 5px;
   width: 18rem;
@@ -174,7 +193,6 @@ main .middle {
   letter-spacing: 1px;
 }
 .search:focus {
-  width: 22rem;
   border: 2px solid var(--color-primary);
   padding-left: 2.8rem;
   transition: 0.3s;
@@ -196,7 +214,17 @@ main .middle {
 }
 
 .cat-list li:hover {
+  color: var(--color-primary);
   background-color: var(--color-light);
+}
+
+.cat-list .active {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.middle .cat-dropdown {
+  display: none;
 }
 
 /* ********** DISH LIST ********** */
@@ -224,11 +252,29 @@ main .middle {
   border-radius: 0.5rem;
   transition: .5s;
   flex-grow: 1;
+  flex-shrink: 0;
   max-width: 300px;
+  position: relative;
 }
-.dish:last-child {
+/* .dish:last-child {
   flex-grow: 0;
-}
+} */
+
+/* .dish::before {
+  content: "recipe";
+  color: var(--color-white);
+  display: block;
+  width: 25%;
+  height: 2rem;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 15%;
+  background: linear-gradient(transparent, rgba(35, 95, 30, 0.9));
+  position: absolute;
+  bottom: 1;
+  right: 0;
+  z-index: 11;
+  cursor: pointer;
+} */
 
 .food-pic {
   height: 250px;
@@ -247,6 +293,23 @@ main .middle {
 .food-pic:hover img {
   transform: scale(1.1);
   overflow: hidden;
+}
+
+.recipe {
+  position: absolute;
+  color: var(--color-white);
+  display: block;
+  width: 25%;
+  height: 3rem;
+  padding: 0.5rem;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  background: linear-gradient(transparent, rgba(35, 95, 30, 0.5));
+  position: absolute;
+  top: 25%;
+  right: 0;
+  z-index: 13;
+  cursor: pointer;
 }
 
 .food-details {
@@ -284,6 +347,91 @@ main .middle {
   opacity: 1;
 }
 
+/* ******************** ---------- ********************
+***************        MEDIA QUERIES   ************* */
+
+/* SMALL TABLETS */
+
+@media screen and (max-width: 1065px) {
+  body {
+    background-color: var(--color-white);
+  }
+
+  .middle .cat-row {
+    display: none;
+  }
+
+  .middle .cat-dropdown {
+    display: block;
+  }
+
+  .cat-dropdown .dropdown-btn {
+    font-size: 1.2rem;
+    padding: 0.4rem 2rem;
+    border: 2px solid var(--color-gray);
+    background-color: var(--color-white);
+    border-radius: 5px;
+    width: 18rem;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .cat-dropdown .dropdown-btn:hover {
+    background-color: var(--color-light);
+  }
+
+  .cat-dropdown  .material-icons {
+    font-size: 1.8rem;
+  }
+
+  .cat-items {
+    font-size: 1rem;
+    position: absolute;
+    width: 18rem;
+    margin-top: 0.2rem;
+    background-color: var(--color-light);
+    z-index: 12;
+    display: none;
+  }
+
+  .cat-items li {
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid var(--color-gray);
+    cursor: pointer;
+  }
+  .cat-items li:last-child {
+    border-bottom: none;
+  }
+
+  .cat-items li:hover {
+    text-decoration: underline;
+    background-color: var(--color-primary)
+  }
+
+  .food-list {
+    justify-content: center;
+  }
+}
+
+/* MOBILE PHONES */
+@media screen and (max-width: 815px) {
+  body {
+    background-color: var(--color-white);
+  }
+
+  main .middle {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .middle .search, .middle .dropdown-btn {
+    width: 100%;
+  }
+}
+
 
 /* h1 {
   color: #6ed415;
@@ -291,3 +439,4 @@ main .middle {
 h2 {
   color: var(--color-danger);
 } */
+
