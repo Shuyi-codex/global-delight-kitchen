@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
     rel="stylesheet">
 
   <!-- CSS FILE -->
@@ -43,10 +43,12 @@
   <!-- *************** NAVIGATION PANEL *************** -->
   <nav>
     <div class="nav-panel">
-      <img src="images/logo_black.png" alt="Kitchen's Logo" class="logo">
+      <a href="#"><img src="images/logo_black.png" alt="Kitchen's Logo" class="logo"></a>
+      <span class="hamburger"><span class="material-icons">menu</span></span>
       <ul class="nav-items container">
-        <li><span class='material-icons'>close</span></li>
-        <li> <span class='material-icons'>home</span> <span>Home</span></li>
+        <span><span class='material-icons' id="closeBtn">close</span></span>
+        <span><span class='material-icons' id="menuBtn">menu</span></span>
+        <li class="active"> <span class='material-icons'>home</span> <span>Home</span></li>
         <li> <span class='material-icons'>person</span> <span>Account</span></li>
         <li><span class='material-icons'>restaurant</span> <span>Dishes</span></li>
         <li> <span class='material-icons'>shopping_bag</span> <span>Orders</span></li>
@@ -73,7 +75,7 @@
       <div class="search-box">
         <div class="box">
           <span class='material-icons'>search</span>
-          <input class="search" type="search" placeholder="Search dish...">
+          <input id="dishSearch" class="search" type="text" placeholder="Search dish...">
         </div>
       </div>
       <!-- Category list at large screen sizes -->
@@ -102,7 +104,7 @@
     </section>
     <section class="content">
       <div class="food-list">
-        <div class="dish">
+        <div class="dish" id="european">
           <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/pancakes.jpg" alt="pancakes">
@@ -114,7 +116,7 @@
           </div>
         </div>
 
-        <div class="dish">
+        <div class="dish" id="chinese">
           <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/noodles.jpg" alt="noodles">
@@ -126,19 +128,19 @@
           </div>
         </div>
 
-        <div class="dish">
+        <div class="dish" id="american">
           <span class="recipe">Recipe</span>
           <figure class="food-pic">
-            <img src="images/pasta.jpg" alt="pasta">
+            <img src="images/pasta2.jpg" alt="pasta">
           </figure>
           <div class="food-details">
-            <h4 class="title">Pasta with Red Wine</h4>
+            <h4 class="title">Pasta</h4>
             <p class="price"> $<span>15.00</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
-        <div class="dish">
+        <div class="dish" id="european">
           <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/goulash-soup.jpg" alt="goulash">
@@ -150,7 +152,7 @@
           </div>
         </div>
 
-        <div class="dish">
+        <div class="dish" id="american">
           <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/raspberries-yoghurt.jpg" alt="yoghurt">
@@ -162,7 +164,7 @@
           </div>
         </div>
 
-        <div class="dish">
+        <div class="dish" id="european">
           <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/french-fries.jpg" alt="french fries">
@@ -174,7 +176,7 @@
           </div>
         </div>
 
-        <div class="dish">
+        <div class="dish" id="american">
           <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/meatloaf.jpg" alt="meat loaf">
@@ -186,7 +188,7 @@
           </div>
         </div>
 
-        <div class="dish">
+        <div class="dish" id="european">
           <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/pumpkin-soup.jpg" alt="pumpkin soup">
@@ -198,7 +200,7 @@
           </div>
         </div>
 
-        <div class="dish">
+        <div class="dish" id="asian">
           <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/salad.jpg" alt="salad">
@@ -210,7 +212,7 @@
           </div>
         </div>
 
-        <div class="dish">
+        <div class="dish" id="european">
           <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/chicken-schnitzel.jpg" alt="chicken schnitzel">
@@ -222,19 +224,19 @@
           </div>
         </div>
 
-        <div class="dish">
+        <div class="dish" id="european">
           <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/gourmet.jpg" alt="gournet">
           </figure>
           <div class="food-details">
-            <h4 class="title">Gournet</h4>
+            <h4 class="title">Gourmet</h4>
             <p class="price"> $<span>13.00</span></p>
             <button class="add2cart"><span class='material-icons'>add_shopping_cart</span>Add to Cart</button>
           </div>
         </div>
 
-        <div class="dish">
+        <div class="dish" id="asian">
           <span class="recipe">Recipe</span>
           <figure class="food-pic">
             <img src="images/Sambal.jpg" alt="Sambal">
