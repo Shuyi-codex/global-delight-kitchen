@@ -9,6 +9,12 @@ const hamBurger = document.querySelector(".hamburger");
 // MAIN SEGMENT
 const mainContent = document.querySelector("main");
 
+// Add to Cart Button
+const addToCart = document.querySelectorAll(".add2cart");
+
+// CART COUNT
+let cartCountElement = document.getElementById("cartCount");
+
 // Search input
 const search = document.querySelector("#dishSearch");
 
@@ -107,6 +113,29 @@ navItems.forEach(item => {
 hamBurger.addEventListener("click", () => {
   nav.classList.toggle("lg-nav-height");
 })
+
+// cart item count
+var itemCount = 0;
+
+// hide cart item count when no item is added
+cartCountElement.style.display = "none";
+
+// Increase or decrease cart count based on selection
+addToCart.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    cartCountElement.style.display = "block";
+
+    itemCount += 1;
+    console.log(itemCount);
+    cartCountElement.textContent = itemCount;
+    setTimeout(showSuccess, );
+  });
+});
+
+
+
+
+
 
 // ********** Search dish
 const searchDish = () => {

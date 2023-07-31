@@ -108,7 +108,7 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 1rem 0;
+  padding: 0.2rem 0;
 }
 
 .nav-items {
@@ -196,7 +196,7 @@ main .top .right {
   position: absolute;
 }
 
-#cartItems {
+#cartCount {
   text-align: center;
   position: absolute;
   width: 20px;
@@ -211,6 +211,7 @@ main .top .right {
   left: 0.7rem;
   transform: translateY(-100%);
   z-index: 2;
+  transition: all 2s ease-in;
 }
 
 /* MIDDLE */
@@ -506,6 +507,7 @@ main .middle {
     position: absolute;
     cursor: pointer;
     transition: all .3s ease;
+    top: 1rem;
   }
 
   nav {
@@ -534,7 +536,7 @@ main .middle {
   }
 
   .logo {
-    width: 30px;
+    width: 40px;
     margin: 0 auto;
   }
 
@@ -546,7 +548,7 @@ main .middle {
     font-size: 1rem;
     position: sticky;
     top: 53px;
-    padding: 0.5rem;
+    padding: 1rem 0.5rem;
     border-radius: 2px;
   }
 
