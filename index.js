@@ -169,7 +169,7 @@ addToCart.forEach((btn) => {
 
 // ********** Search dish
 const searchDish = () => {
-  removeActive();
+  removeActive(category);
   category[0].classList.add("active");
   const val = dishSearch.value.toLowerCase();
   dishes.forEach(dish => {
@@ -180,6 +180,7 @@ const searchDish = () => {
       dish.style.display = "none";
     }
   })
+  console.log("What's happening");
 }
 
 // const showAllDishes = () => {
