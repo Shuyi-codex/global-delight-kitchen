@@ -77,7 +77,7 @@ mainContent.addEventListener("click", closeNavPanel);
 function handleResize() {
   var screenWidth = window.innerWidth;
 
-  if (screenWidth <= 700) {
+  if (screenWidth < 700) {
     nav.classList.add("lg-nav-width");
     nav.classList.remove("sm-nav-width");
     closeBtn.style.display = "none";
@@ -125,6 +125,7 @@ navItems.forEach(item => {
 // Menu close and open on small screen <by changing element height>
 hamBurger.addEventListener("click", () => {
   nav.classList.toggle("lg-nav-height");
+  menuBtn.style.display = "none";
 })
 
 //                    NUMBER OF ORDERS IN CART
