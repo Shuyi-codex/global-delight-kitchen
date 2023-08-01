@@ -606,6 +606,10 @@ main .middle {
     /* background-color: var(--color-black); */
   }
 
+  nav {
+    height: 6vh;
+  }
+
   main .middle {
     flex-direction: column;
   }
