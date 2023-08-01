@@ -23,8 +23,17 @@ const fl = document.querySelector(".food-list")
 // Dishes
 const dishes = document.querySelectorAll(".dish");
 
-// Category list
+// Category tag list
 const category = document.querySelectorAll(".cat-list li");
+
+// Drop-down button
+const dropDownBtn = document.querySelector(".dropdown-btn");
+
+// Category select box
+const selectCategoryBox = document.querySelector(".cat-items");
+
+// Category select items
+const selectCategoryItems = document.querySelectorAll(".cat-items li");
 
 // groups
 const african = document.querySelectorAll("#african");
@@ -93,9 +102,11 @@ handleResize();
 
 window.addEventListener("resize", handleResize);
 
+// ----------------------------------------------------------
 
-// change colour of clicked nav item
-// Remove active class from unclicked items
+// ***** change colour of clicked nav item by adding active class
+
+// remove active class from unclicked items
 const removeActiveClass = () => {
   navItems.forEach(item => {
     item.classList.remove("active");
@@ -109,10 +120,15 @@ navItems.forEach(item => {
     })
 });
 
-// Menu close and open on small screen
+// ----------------------------------------------------------
+
+// Menu close and open on small screen <by changing element height>
 hamBurger.addEventListener("click", () => {
   nav.classList.toggle("lg-nav-height");
 })
+
+//                    NUMBER OF ORDERS IN CART
+// ----------------------------------------------------------
 
 // cart item count
 var itemCount = 0;
@@ -122,41 +138,33 @@ cartCountElement.style.display = "none";
 
 // Increase or decrease cart count based on selection
 addToCart.forEach((btn) => {
+  // amount of dish in cart
   var singleCount = 0;
+
+  // Create HTML element for each number of dish in cart
   const iye = document.createElement("span");
   iye.id = "iye";
   const omo = btn.appendChild(iye);
 
-
   btn.addEventListener("click", () => {
     cartCountElement.style.display = "block";
-    // btn.style.opacity = "0.9";
 
     itemCount += 1;
     console.log(itemCount);
     cartCountElement.textContent = itemCount;
+
+    // add class to the grandparent of button
     btn.parentElement.parentElement.classList.add("ordered");
 
-
-    
-
-    // singleCount = 0;
     singleCount += 1;
     omo.textContent = singleCount;
 
-    // dishes.forEach(dish => {
-    //   dish.classList.add("ordered");
-    // })
-    // setTimeout(showSuccess, );
+    // setTimeout(showSuccess);
   });
 });
 
-
-
-
-
-
-
+//                  SEARCH INPUT
+// ----------------------------------------------------------
 
 // ********** Search dish
 const searchDish = () => {
@@ -171,7 +179,6 @@ const searchDish = () => {
       dish.style.display = "none";
     }
   })
-  
 }
 
 // const showAllDishes = () => {
@@ -185,16 +192,20 @@ const searchDish = () => {
 search.addEventListener("keyup", searchDish);
 // search.addEventListener("blur", showAllDishes);
 
-// ********** Category selection
-const removeActive = () => {
-  category.forEach(item => {
+//                      FILTER TAGS
+// ----------------------------------------------------------
+
+// remove class function
+const removeActive = (t) => {
+  t.forEach(item => {
     item.classList.remove("active");
   })
 }
 
+// ********** Category selection  <<button tags>>
 category.forEach(cat => {
   cat.addEventListener("click", () => {
-    removeActive();
+    removeActive(category);
     cat.classList.add("active");
     dishes.forEach(dish => {
       dish.style.display = "none";
@@ -235,3 +246,58 @@ category.forEach(cat => {
     })
   })
 })
+
+//                      FILTER SELECT
+// ----------------------------------------------------------
+dropDownBtn.addEventListener("click", () => {
+  selectCategoryBox.classList.toggle("cat-items-show");
+})
+
+selectCategoryItems.forEach((cat) => {
+  cat.addEventListener("click", () => {
+    removeActive(selectCategoryItems);
+    cat.classList.add("active");
+
+    // Add angle icon upon selecting each option
+    const angleDown = document.createElement("span");
+    angleDown.classList.add("material-icons");
+    angleDown.textContent = "expand_more";
+
+    var clickedContent = cat.textContent;
+    dropDownBtn.textContent = clickedContent;
+    dropDownBtn.appendChild(angleDown);
+
+    dishes.forEach((dish) => {
+      dish.style.display = "none";
+
+      // display only selected category
+      var catText = cat.textContent.toLowerCase();
+      switch (catText) {
+        case "african":
+          african.forEach((item) => {
+            item.style.display = "block";
+          });
+          break;
+        case "american":
+          american.forEach((item) => {
+            item.style.display = "block";
+          });
+          break;
+        case "asian":
+          asian.forEach((item) => {
+            item.style.display = "block";
+          });
+          break;
+        case "european":
+          european.forEach((item) => {
+            item.style.display = "block";
+          });
+          break;
+        default:
+          dish.style.display = "block";
+          break;
+      }
+    });
+    selectCategoryBox.classList.toggle("cat-items-show");
+  });
+});
