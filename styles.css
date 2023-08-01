@@ -621,8 +621,8 @@ main .middle {
 
   .food-list {
     margin: 0;
-    gap: 0.5rem;
-    /* justify-content: center; */
+    gap: 0.8rem;
+    justify-content: flex-start;
   }
 
   .dish {
