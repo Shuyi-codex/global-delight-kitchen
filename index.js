@@ -122,15 +122,36 @@ cartCountElement.style.display = "none";
 
 // Increase or decrease cart count based on selection
 addToCart.forEach((btn) => {
+  var singleCount = 0;
+  const iye = document.createElement("span");
+  iye.id = "iye";
+  const omo = btn.appendChild(iye);
+
+
   btn.addEventListener("click", () => {
     cartCountElement.style.display = "block";
+    // btn.style.opacity = "0.9";
 
     itemCount += 1;
     console.log(itemCount);
     cartCountElement.textContent = itemCount;
-    setTimeout(showSuccess, );
+    btn.parentElement.parentElement.classList.add("ordered");
+
+
+    
+
+    // singleCount = 0;
+    singleCount += 1;
+    omo.textContent = singleCount;
+
+    // dishes.forEach(dish => {
+    //   dish.classList.add("ordered");
+    // })
+    // setTimeout(showSuccess, );
   });
 });
+
+
 
 
 

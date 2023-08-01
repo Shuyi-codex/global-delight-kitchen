@@ -211,7 +211,6 @@ main .top .right {
   left: 0.7rem;
   transform: translateY(-100%);
   z-index: 2;
-  transition: all 2s ease-in;
 }
 
 /* MIDDLE */
@@ -263,7 +262,7 @@ main .middle {
   padding: 0.5rem 1rem;
   border: 1px solid var(--color-primary);
   cursor: pointer;
-  transition: transform all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .cat-list li:hover {
@@ -312,6 +311,15 @@ main .middle {
   max-width: 300px;
   position: relative;
 }
+
+.ordered {
+  box-shadow: 0 2px 1px 0.4px var(--color-primary);
+}
+
+#iye {
+  color: var(--color-dark);
+}
+
 /* .dish:last-child {
   flex-grow: 0;
 } */
