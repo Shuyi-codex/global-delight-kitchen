@@ -534,7 +534,7 @@ main .middle {
 
   nav {
     /* height: 85vh; */
-    height: 8vh;
+    height: 7vh;
     width: 100vw;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -569,7 +569,7 @@ main .middle {
   main .top {
     font-size: 1rem;
     position: sticky;
-    top: 53px;
+    top: 55px;
     padding: 1rem 0.5rem;
     border-radius: 2px;
   }
