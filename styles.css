@@ -208,7 +208,7 @@ main .top .right {
   background-color: var(--color-primary);
   border-radius: 50%;
   top: 50%;
-  left: 0.3rem;
+  left: 0.7rem;
   transform: translateY(-100%);
   z-index: 2;
 }
@@ -569,7 +569,7 @@ main .middle {
   main .top {
     font-size: 1rem;
     position: sticky;
-    top: 58px;
+    top: 53px;
     padding: 1rem 0.5rem;
     border-radius: 2px;
   }
@@ -596,35 +596,6 @@ main .middle {
   }
 }
 
-/* MOBILE PHONES - SMALL SCREEN */
-@media screen and (max-width: 520px) {
-  .food-list {
-    margin: 0 auto;
-    gap: 0.1rem;
-    justify-content: space-between;
-  }
-  
-  .dish {
-    height: 100%;
-    width: 211px;
-    /* flex-grow: 1; */
-    flex-shrink: 0;
-    max-width: 211px;
-  }
-
-  .food-pic {
-    height: 130px;
-  }
-
-  .recipe {
-    font-size: 0.7rem;
-    width: 60px;
-    height: 2rem;
-    padding: 0.4rem;
-    top: 5%;
-  }
-}
-
 
 /* MOBILE PHONES - SMALL SCREEN */
 @media screen and (max-width: 480px) {
@@ -632,37 +603,30 @@ main .middle {
     width: 100vw;
     font-size: 0.8rem;
     margin: 0 auto;
+    /* background-color: var(--color-black); */
   }
 
   nav {
-    height: 6vh;
-  }
-
-  main .top {
-    top: 52px;
+    height: 8vh;
   }
 
   main .middle {
     flex-direction: column;
   }
 
-  .middle .search, .middle .dropdown-btn {
+  .middle .search, .middle .dropdown-btn, .cat-items {
     width: 100%;
-  }
-
-  .cat-dropdown .cat-items {
-    width: 93%;
   }
 
   .content {
-    margin: 0 auto;
-    width: 100%;
+    margin: auto;
+    width: 95%;
   }
 
   .food-list {
     margin: 0;
     gap: 0.8rem;
-    /* justify-content: flex-start; */
+    justify-content: flex-start;
   }
 
   .dish {
