@@ -564,12 +564,12 @@ main .middle {
 
   main {
     position: relative;
-    top: 50px;
+    top: 55px;
   }
   main .top {
     font-size: 1rem;
     position: sticky;
-    top: 53px;
+    top: 55px;
     padding: 1rem 0.5rem;
     border-radius: 2px;
   }
@@ -596,6 +596,39 @@ main .middle {
   }
 }
 
+/* MOBILE PHONES - SMALL SCREEN */
+@media screen and (max-width: 520px) {
+  nav {
+    height: 7vh;
+  }
+
+  .food-list {
+    margin: 0 auto;
+    column-gap: 0.8rem;
+    justify-content: flex-start;
+    row-gap: 1rem;
+  }
+
+  .dish {
+    height: 100%;
+    width: 211px;
+    flex-shrink: 0;
+    max-width: 211px;
+  }
+
+  .food-pic {
+    height: 130px;
+  }
+
+  .recipe {
+    font-size: 0.7rem;
+    width: 60px;
+    height: 2rem;
+    padding: 0.4rem;
+    top: 5%;
+  }
+}
+
 
 /* MOBILE PHONES - SMALL SCREEN */
 @media screen and (max-width: 480px) {
@@ -607,7 +640,19 @@ main .middle {
   }
 
   nav {
-    height: 8vh;
+    height: 6vh;
+  }
+
+  main {
+    position: relative;
+    top: 50px;
+  }
+  main .top {
+    font-size: 1rem;
+    position: sticky;
+    top: 55px;
+    padding: 1rem 0.5rem;
+    border-radius: 2px;
   }
 
   main .middle {
