@@ -599,7 +599,7 @@ main .middle {
 /* MOBILE PHONES - SMALL SCREEN */
 @media screen and (max-width: 520px) {
   nav {
-    height: 7vh;
+    height: 6vh;
   }
 
   .food-list {
