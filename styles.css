@@ -569,7 +569,7 @@ main .middle {
   main .top {
     font-size: 1rem;
     position: sticky;
-    top: 53px;
+    top: 58px;
     padding: 1rem 0.5rem;
     border-radius: 2px;
   }
@@ -606,10 +606,10 @@ main .middle {
   
   .dish {
     height: 100%;
-    width: 200px;
+    width: 211px;
     /* flex-grow: 1; */
     flex-shrink: 0;
-    max-width: 200px;
+    max-width: 211px;
   }
 
   .food-pic {
@@ -636,6 +636,10 @@ main .middle {
 
   nav {
     height: 6vh;
+  }
+
+  main .top {
+    top: 52px;
   }
 
   main .middle {
