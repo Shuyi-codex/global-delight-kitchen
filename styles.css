@@ -300,7 +300,7 @@ main .middle {
 .dish {
   height: 100%;
   width: 258px;
-  box-shadow: 0 0 1px 0.4px var(--color-light);
+  box-shadow: 0 0 1px 0.4px var(--color-gray);
   box-sizing: border-box;
   border-radius: 0.5rem;
   transition: .5s;
@@ -604,16 +604,16 @@ main .middle {
 
   .food-list {
     margin: 0 auto;
-    column-gap: 0rem;
+    column-gap: 0.1rem;
     justify-content: space-between;
     row-gap: 1rem;
   }
 
   .dish {
     height: 100%;
-    width: 211px;
+    width: 215px;
     flex-shrink: 0;
-    max-width: 211px;
+    max-width: 215px;
   }
 
   .food-pic {
@@ -650,7 +650,7 @@ main .middle {
   main .top {
     font-size: 1rem;
     position: sticky;
-    top: 55px;
+    top: 53px;
     padding: 1rem 0.5rem;
     border-radius: 2px;
   }
@@ -663,6 +663,10 @@ main .middle {
     width: 100%;
   }
 
+  .cat-items {
+    width: 420px
+  }
+
   .content {
     margin: auto;
     width: 95%;
@@ -671,7 +675,7 @@ main .middle {
   .food-list {
     margin: 0;
     gap: 0.8rem;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
   }
 
   .dish {
