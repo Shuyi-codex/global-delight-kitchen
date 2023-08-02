@@ -569,7 +569,7 @@ main .middle {
   main .top {
     font-size: 1rem;
     position: sticky;
-    top: 50px;
+    top: 53px;
     padding: 1rem 0.5rem;
     border-radius: 2px;
   }
@@ -596,9 +596,38 @@ main .middle {
   }
 }
 
+/* MOBILE PHONES - SMALL SCREEN */
+@media screen and (max-width: 520px) {
+  .food-list {
+    margin: 0;
+    gap: 0.8rem;
+    justify-content: flex-start;
+  }
+  
+  .dish {
+    height: 100%;
+    width: 200px;
+    /* flex-grow: 1; */
+    flex-shrink: 0;
+    max-width: 200px;
+  }
+
+  .food-pic {
+    height: 130px;
+  }
+
+  .recipe {
+    font-size: 0.7rem;
+    width: 60px;
+    height: 2rem;
+    padding: 0.4rem;
+    top: 5%;
+  }
+}
+
 
 /* MOBILE PHONES - SMALL SCREEN */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
   body {
     width: 100vw;
     font-size: 0.8rem;
