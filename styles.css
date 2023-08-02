@@ -600,7 +600,7 @@ main .middle {
 @media screen and (max-width: 520px) {
   .food-list {
     margin: 0 auto;
-    gap: 0.8rem;
+    gap: 0.1rem;
     justify-content: space-between;
   }
   
