@@ -208,7 +208,7 @@ main .top .right {
   background-color: var(--color-primary);
   border-radius: 50%;
   top: 50%;
-  left: 0.7rem;
+  left: 0.3rem;
   transform: translateY(-100%);
   z-index: 2;
 }
@@ -569,7 +569,7 @@ main .middle {
   main .top {
     font-size: 1rem;
     position: sticky;
-    top: 53px;
+    top: 50px;
     padding: 1rem 0.5rem;
     border-radius: 2px;
   }
@@ -598,39 +598,38 @@ main .middle {
 
 
 /* MOBILE PHONES - SMALL SCREEN */
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 500px) {
   body {
     width: 100vw;
     font-size: 0.8rem;
     margin: 0 auto;
-    /* background-color: var(--color-black); */
   }
 
   nav {
     height: 6vh;
   }
 
-  main .top {
-    top: 53px;
-  }
-
   main .middle {
     flex-direction: column;
   }
 
-  .middle .search, .middle .dropdown-btn, .cat-items {
+  .middle .search, .middle .dropdown-btn {
     width: 100%;
   }
 
+  .cat-dropdown .cat-items {
+    width: 93%;
+  }
+
   .content {
-    margin: auto;
-    width: 95%;
+    margin: 0 auto;
+    width: 100%;
   }
 
   .food-list {
     margin: 0;
     gap: 0.8rem;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
   }
 
   .dish {
