@@ -534,7 +534,7 @@ main .middle {
 
   nav {
     /* height: 85vh; */
-    height: 7vh;
+    height: 8vh;
     width: 100vw;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -569,7 +569,7 @@ main .middle {
   main .top {
     font-size: 1rem;
     position: sticky;
-    top: 55px;
+    top: 53px;
     padding: 1rem 0.5rem;
     border-radius: 2px;
   }
@@ -598,7 +598,7 @@ main .middle {
 
 
 /* MOBILE PHONES - SMALL SCREEN */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 520px) {
   body {
     width: 100vw;
     font-size: 0.8rem;
@@ -608,6 +608,10 @@ main .middle {
 
   nav {
     height: 6vh;
+  }
+
+  main .top {
+    top: 53px;
   }
 
   main .middle {
